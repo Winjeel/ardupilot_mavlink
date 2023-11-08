@@ -1870,5 +1870,11 @@
       <field type="uint16_t[4]" name="rpm" units="rpm">RPM (eRPM).</field>
       <field type="uint16_t[4]" name="count">count of telemetry packets received (wraps at 65535).</field>
     </message>
+    <message id="11045" name="FLIGHT_DURATION">
+      <description>Information about flight since last arming.</description>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="uint32_t" name="arming_time_ms" units="ms" invalid="0">Timestamp at arming (time since system boot), 0 for unknown.</field>
+      <field type="uint32_t" name="takeoff_time_ms" units="ms" invalid="0">Timestamp at takeoff (time since system boot), 0 for unknown.</field>
+    </message>
   </messages>
 </mavlink>
